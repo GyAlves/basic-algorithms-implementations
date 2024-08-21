@@ -14,8 +14,8 @@ function binary_search (items, value){
         guess = items[mid];
 
         if (guess === value) return guess;
-        if (guess > value) high = mid - 1;
-        if (guess < value) low = mid + 1;
+        if (guess > value) high = mid - 1; // if the guessed value is too high the new high value is cut in half
+        if (guess < value) low = mid + 1; // if the guessed value is too high the new low value is incremented in half
     }
 
     return null;
